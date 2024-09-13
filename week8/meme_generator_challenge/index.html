@@ -1,0 +1,37 @@
+<!-- Notice how we have used "semantic HTML" here -->
+<!-- Re-read the lesson if you don't understand what that means -->
+<!-- https://www.zachgollwitzer.com/posts/2021/fullstack-developer-series/7-html-crash-course-->
+<main>
+
+    <head>
+        <title>Meme Generator</title>
+        <!--Links the css stylesheet to the HTML document-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <section class="content">
+            <!-- Your HTML code goes here -->
+            <h1>Output</h1>
+            <h3 id="memes">Programmer memes</h3>
+            <h3 id="jokes">Tell me something funny!</h3>
+            <h3 id="quotes">Give me some wisdom...</h3>
+            <h3 id="riddles">I want a ridle!</h3>
+            </section>
+          
+            <!-- No need to change anything in this section -->
+            <section class="sidebar">
+              <h2>Actions</h2>
+              <button onclick="showMeme()">Show a Meme</button>
+              <button onclick="showJoke()">Tell Me a Joke</button>
+              <button onclick="showQuote()">Random Quote</button>
+              <button onclick="showRiddle()">Riddle me</button>
+              <button class="reveal-btn" onclick="revealAnswers()">Reveal Riddle Answer</button>
+              <p class="attribution">Code challenge by <a href="https://www.twitter.com/zg_dev" target="_top">@zg_dev</a></p> 
+            </section>
+
+            <!--Links the JavaScript file to the HTML document-->
+            <script src="script.js" defer></script>
+    </body>
+
+</main>
