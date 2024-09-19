@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <!--container for the three different sections-->
+  <div id="card">
+
+    <!--Upper section-->
+    <div id="top-section">
+      <h2>Join our community</h2>
+      <h4>30-day, hassle-free money back guarantee</h4>
+      <p>
+        Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any develpoers who are serious about honing their skills.
+      </p>
+    </div>
+
+    <!--Bottom section-->
+    <div id="bottom-section">
+
+      <!--Bottom left section-->
+      <div id="bottom-left-section">
+        <h4>Monthly Subscription</h4>
+        <div id="price-container">
+          <div id="price">$29</div>
+          <div id="price-frequency">per month</div>
+        </div>
+        <p>Full access for less than $1 a day</p>
+        <button onclick="alertUser()">Sign Up</button>
+      </div><!--this looks mad ugly for now but it can be fixed--><div id="bottom-right-section">
+        <h4>Why us</h4>
+        <ul>
+          <li>Tutorials by industry experts</li>
+          <li>Peer & expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flash card decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
