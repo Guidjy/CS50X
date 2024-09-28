@@ -1,0 +1,159 @@
+html
+{
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+}
+
+/*This preventsd divs from overflowing*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Used to center the card-containter*/
+#main-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid black;
+}
+
+#card-container
+{
+    display: flex;
+    /*column on mobile*/
+    flex-direction: column;
+    width: 375px;
+    height: auto;
+}
+
+.testimonial-card
+{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: 2px solid gray;
+    height: auto;
+    width: 100%;
+    padding: 25px;
+    margin: 10px;
+}
+
+.name-and-pfp
+{
+    display: flex;
+    flex-direction: row;
+    /* Vertically aligns the items in the center */
+    align-items: center;
+    /* Adds space between the image and the text */
+    gap: 10px;
+}
+
+.name-and-pfp img
+{
+    /*makes the pfp circular*/
+    border-radius: 50%;
+}
+
+.name-and-pfp div 
+{
+    display: flex;
+    /* Stacks the h4 and p vertically */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.name-and-pfp h4 
+{
+    margin: 0px;
+}
+
+.name-and-pfp h5
+{
+    margin: 0px;
+}
+
+.testimonial-title
+{
+    font-weight: 600;
+}
+
+.testimonial-paragraph
+{
+    font-weight: 500;
+}
+
+/*Desktop Layout*/
+/*TODO (maybe): change min-width*/
+@media (min-width: 930px) 
+{
+    #card-container
+    {
+        flex-direction: row;
+        width: 1440px;
+    }
+
+    #desktop-left-section
+    {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+    #upper-cards
+    {
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        margin-bottom: 10px;
+    }
+
+    .daniel
+    {
+        height: 100%;
+        width: 70%;
+    }
+
+    .jonathan
+    {
+        height: 100%;
+        width: 30%;
+    }
+
+    #lower-cards
+    {
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        margin-top: 10px;
+    }
+
+    .jeanette
+    {
+        height: 100%;
+        width: 70%;
+    }
+
+    .patrick
+    {
+        height: 100%;
+        width: 30%;
+    }
+
+    #desktop-right-section
+    {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-left: 10px;
+    }
+
+    #desktop-right-section .testimonial-card
+    {
+        margin: 0;
+        height: 100%;
+    }
+}
+
