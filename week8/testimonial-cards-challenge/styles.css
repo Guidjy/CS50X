@@ -10,6 +10,11 @@ html
     box-sizing: inherit;
 }
 
+body
+{
+    background-color: rgb(237, 242, 248);
+}
+
 /*Used to center the card-containter*/
 #main-container
 {
@@ -17,7 +22,6 @@ html
     flex-direction: row;
     justify-content: center;
     height: 100%;
-    border: 2px solid black;
 }
 
 #card-container
@@ -34,11 +38,39 @@ html
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 2px solid gray;
+    border-radius: 8px;
     height: auto;
     width: 100%;
     padding: 25px;
     margin: 10px;
+    position: relative;
+}
+
+#quote 
+{
+    position: absolute;
+    right: 15%;
+    top: 0px;
+}
+
+.daniel
+{
+    background-color: hsl(263, 55%, 52%);
+}
+
+.jonathan
+{
+    background-color: hsl(217, 19%, 35%);
+}
+
+.patrick
+{
+    background-color: hsl(219, 29%, 14%);
+}
+
+.jeanette, .kira
+{
+    background-color: hsl(0, 0%, 100%);
 }
 
 .name-and-pfp
@@ -55,6 +87,12 @@ html
 {
     /*makes the pfp circular*/
     border-radius: 50%;
+    border: 2px solid black;
+}
+
+.daniel img
+{
+    border-color: hsl(0, 0%, 81%);
 }
 
 .name-and-pfp div 
@@ -65,14 +103,31 @@ html
     justify-content: space-evenly;
 }
 
-.name-and-pfp h4 
+.name-and-pfp h4, h5
 {
     margin: 0px;
 }
 
-.name-and-pfp h5
+.daniel h4, .jonathan h4, .patrick h4
 {
-    margin: 0px;
+    color: hsl(0, 0%, 100%);
+}
+
+.daniel h5, .jonathan h5, .patrick h5
+{
+    color: hsl(0, 0%, 100%);
+    opacity: 50%;
+}
+
+.jeanette h4, .kira h4
+{
+    color: rgb(89, 92, 102);
+}
+
+.jeanette h5, .kira h5
+{
+    color: rgb(89, 92, 102);
+    opacity: 50%;
 }
 
 .testimonial-title
@@ -80,9 +135,28 @@ html
     font-weight: 600;
 }
 
-.testimonial-paragraph
+.daniel .testimonial-title, .jonathan .testimonial-title, .patrick .testimonial-title
+{
+    color: hsl(0, 0%, 100%);
+}
+
+.jeanette .testimonial-title, .kira .testimonial-title
+{
+    color: rgb(89, 92, 102);
+}
+
+.daniel .testimonial-paragraph, .jonathan .testimonial-paragraph, .patrick .testimonial-paragraph
 {
     font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    opacity: 70%;
+}
+
+.jeanette .testimonial-paragraph, .kira .testimonial-paragraph
+{
+    font-weight: 500;
+    color: rgb(89, 92, 102);
+    opacity: 70%;
 }
 
 /*Desktop Layout*/
@@ -133,13 +207,13 @@ html
     .jeanette
     {
         height: 100%;
-        width: 70%;
+        width: 30%;
     }
 
     .patrick
     {
         height: 100%;
-        width: 30%;
+        width: 70%;
     }
 
     #desktop-right-section
