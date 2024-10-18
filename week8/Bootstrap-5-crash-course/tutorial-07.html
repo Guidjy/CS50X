@@ -1,0 +1,87 @@
+<!--Grid layout-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>tutorial 07</title>
+</head>
+<body>
+    <!--Grid layouts are a way oif placing content on a page in rows and columns
+    Bootstrap uses a 12 column grid system, which means that on any given row,
+    we can set the width of an element to anything from 1 to 12 columns-->
+    <!--0-0: Grids always go inside containers-->
+
+    <div class="container-lg my-5">
+        <h2>basic grid</h2>
+        <!--To create a grid, we first create a row of content
+        and then we create columns inside of that row-->
+        <div class="row">
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">col 4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>column widths</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-4">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-2">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>responsive column widths</h2>
+        <div class="row">
+            <div class="col-sm-4 col-lg-6">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-sm-4 col-lg-4">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-sm-4 col-lg-2">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>justifying columns</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 1</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 2</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-primary text-light">col 3</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Boostrap JS and its dependencies-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
