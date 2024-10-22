@@ -10,13 +10,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <!--My own stylesheet-->
   <link rel="stylesheet" href="styles.css">
-  <style>
-    section
-    {
-        padding-top: 60px;
-        padding-bottom: 0px;
-    }
-  </style>
 </head>
 <body>
 
@@ -378,6 +371,74 @@
             </div>
 
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Contact form-->
+  <!--form-control, form-label, form-select, input-group, input-group-text-->
+  <section id="contact">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Get in touch</h2>
+        <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+      </div>
+
+      <!--form-->
+      <div class="row justify-content-center my-5">
+        <!--This div will have 100% width on screens smaller than large
+        and will occupy 6 columns on lg+ screens-->
+        <div class="col-lg-6">
+
+          <form>
+            <!--email-->
+            <label for="email" class="form-label">Email address:</label>
+            <!--form-control styles the form-->
+            <div class="mb-4 input-group">
+              <!--icon-->
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill"></i>
+              </span>
+              <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+            </div>
+
+            <!--name-->
+            <label for="name" class="form-label">Name:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-person-fill"></i>
+              </span>
+              <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+            </div>
+
+            <!--select-->
+            <label for="subject" class="form-label">What is your question about?</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>Pricing query</option>
+                <option value="content">Content query</option>
+                <option value="other">Other query</option>
+              </select>
+            </div>
+
+            <!--text query-->
+            <!--floating label-->
+            <div class="form-floating mb-4 mt-5">
+              <textarea id="query" class="form-control" style="height: 140px"></textarea>
+              <label for="query">Your query...</label>
+            </div>
+
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+          </form>
+
         </div>
       </div>
     </div>
