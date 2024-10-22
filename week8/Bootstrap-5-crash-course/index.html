@@ -87,7 +87,7 @@
         when the screen size reaches medium-->
         <div class="col-md-5 text-center d-none d-md-block">
           <!--img-fluid makes the image's width equal to 100% of its parent element-->
-          <img class="img-fluid" src="assets/ebook-cover.png" alt="ebook cover">
+          <img class="img-fluid tt" data-bs-placement="bottom" title="Net Ninja Book Cover" src="assets/ebook-cover.png" alt="ebook cover">
         </div>
       </div>
     </div>
@@ -402,6 +402,9 @@
                 <i class="bi bi-envelope-fill"></i>
               </span>
               <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+              <span class="input-group-text">
+                <i class="bi bi-question-circle text-muted tt" data-bs-placement="bottom" title="Enter an email address we can reply to"></i>
+              </span>
             </div>
 
             <!--name-->
@@ -411,6 +414,9 @@
                 <i class="bi bi-person-fill"></i>
               </span>
               <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+              <span class="input-group-text">
+                <i class="bi bi-question-circle text-muted tt" data-bs-placement="bottom" title="Pretty self explanatory really..."></i>
+              </span>
             </div>
 
             <!--select-->
@@ -447,5 +453,12 @@
 
   <!--Boostrap JS and its dependencies-->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--this script is required for tooltips to work-->
+  <script>
+    const tooltips = document.querySelectorAll('.tt');
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t);
+    });
+  </script>
 </body>
 </html>
