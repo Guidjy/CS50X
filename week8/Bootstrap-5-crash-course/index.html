@@ -5,7 +5,7 @@
   <title>Net Ninja Pro - the Book</title>
 
   <!--Bootstrap CSS-->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
   <!--Bootstrap icons-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <!--My own stylesheet-->
@@ -82,6 +82,11 @@
           </h1>
           <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, exercitationem!</p>
           <a href="#pricing" class="btn btn-secondary btn-large">Buy Now</a>
+
+          <!--open sidebar / offcanvas-->
+          <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+            Explore my other books
+          </a>
         </div>
         <!--d-none makes the div not be displayed and d-md-block displays the div as a block
         when the screen size reaches medium-->
@@ -280,11 +285,11 @@
 
 
   <!--reviews list-->
-  <section id="reviews" class="bg-light">
+  <section id="reviews" class="bg-altlight">
     <div class="container-lg">
       <div class="text-center">
         <h2>
-          <i class="bi bi-stars"></i>
+          <i class="bi bi-stars text-altdark"></i>
           Book Reviews
         </h2>
         <p class="lead">What my students have said about the book...</p>
@@ -449,6 +454,84 @@
       </div>
     </div>
   </section>
+
+
+  <!--get updates / modal trigger-->
+  <section class="bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h2>Stay in the loop</h2>
+        <p class="lead">Get the latest updates as they happen...</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="text-muted my-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident totam quos id minus fugit corrupti 
+          corporis sequi vero laborum molestiae, debitis labore tempora sit ad soluta voluptatibus! Possimus, minima doloribus. Lorem ipsum 
+          dolor sit amet consectetur adipisicing elit. Ut exercitationem reprehenderit tempora iure pariatur ex repellat dolor, itaque 
+          accusantium? Voluptates quibusdam molestiae nisi nobis harum ipsa dolore error? Ipsam, alias.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+            Register for Updates
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--modal itself-->
+  <!--fade makes the modal fade in and out when the button is clicked
+  aria-hidden: will not show up by default-->
+  <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <!--Bubble that pops up on the screen-->
+    <div class="modal-dialog">
+      <!--content inside the bubble-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Get the latest updates</h5>
+          <!--button-close makes the button a cross and places it correctly in the modal
+          data-bs-dismiss="modal": closes the modal-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, expedita accusamus? Ullam, incidunt molestias 
+          tempora expedita iusto facilis illo aliquam necessitatibus, vitae numquam vel, iste repudiandae ipsa animi quo 
+          eius.</p>
+          <!--Input field for email-->
+          <label for="modal-email" class="for-label">Your email address:</label>
+          <input type="email" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--offcanvas-->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebar-label">My other books</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit commodi ratione eos itaque placeat?
+      Modi a veritatis praesentium ut eaque illum, fugiat explicabo iusto labore quaerat obcaecati, porro laudantium 
+      pariatur.</p>
+
+      <!--dropdown-->
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
+          Choose a book title
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+          <li><a href="#" class="dropdown-item">Become a react Superhero</a></li>
+          <li><a href="#" class="dropdown-item">Conquering Vue.js</a></li>
+          <li><a href="#" class="dropdown-item">Levelling up your Your Next.js</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 
 
   <!--Boostrap JS and its dependencies-->
